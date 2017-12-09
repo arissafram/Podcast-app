@@ -12,7 +12,7 @@ class UsersController < ApplicationController
 
     if @user.save
       sign_in(@user)
-      flash[:notice] = 'You are signed in!'
+      flash[:notice] = "You are signed in!"
       redirect_to users_path
     else
       flash[:error] = @user.errors.full_messages.join(', ')
@@ -28,10 +28,9 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
-
   private
 
   def create_params
-    params.require(:user).permit(:username, :password_digest)
+    params.require(:user).permit(:username, :password)
   end
 end

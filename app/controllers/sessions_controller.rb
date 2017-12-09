@@ -17,7 +17,7 @@ class SessionsController < ApplicationController
       flash[:notice] = "Hi, #{username}! You signed in!"
       redirect_to users_path
     else
-      flash[:error] = "Username does not exist"
+      flash[:error] = "User not found :("
       @user = User.new(username: username)
       render :new
     end
@@ -25,10 +25,9 @@ class SessionsController < ApplicationController
 
   def destroy
     sign_out
-    flash[:notice] = "You signed out!"
-    redirect_to new_sesion_path
+    flash[:notice] = 'You signed out!'
+    redirect_to new_session_path
   end
-
 
   private
 
