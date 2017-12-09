@@ -1,5 +1,8 @@
 class UsersController < ApplicationController
 
+  before_action :ensure_signed_out, only: [:new, :create]
+  before_action :ensure_signed_in, only: [:show, :index]
+
   def new
     @user = User.new
   end
@@ -29,6 +32,6 @@ class UsersController < ApplicationController
   private
 
   def create_params
-    params.require(:user).permit(:username, :password)
+    params.require(:user).permit(:username, :password_digest)
   end
 end
