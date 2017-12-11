@@ -13,7 +13,7 @@ class UsersController < ApplicationController
     if @user.save
       sign_in(@user)
       flash[:notice] = "You are signed in!"
-      redirect_to users_path
+      redirect_to podcasts_path
     else
       flash[:error] = @user.errors.full_messages.join(', ')
       render :new
@@ -26,7 +26,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @podcasts = current_user.podcasts
+    @podcasts = User.find(params[:id]).podcasts
   end
 
   private

@@ -1,7 +1,7 @@
 class PodcastsController < ApplicationController
 
   before_action :ensure_signed_in
-  before_action :load_podcast, only: [:show, :edit, :update, :destroy]
+  before_action :load_podcast, only: [:edit, :update, :destroy]
 
   def new
     @podcast = Podcast.new
@@ -39,6 +39,8 @@ class PodcastsController < ApplicationController
   end
 
   def show
+    @podcast = Podcast.find(params[:id])
+    @currentuser = current_user.podcasts
   end
 
   def destory

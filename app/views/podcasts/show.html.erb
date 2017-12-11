@@ -1,10 +1,19 @@
-<h2><%= @podcast.title %></h2>
+<div class="showview">
+	<div class="showcontainer">
+		<img src="http://is1.mzstatic.com/image/thumb/Music111/v4/6c/9e/5f/6c9e5f7e-aed2-b477-516d-af319c09aa49/source/1200x630bb.jpg">
+		<div class="showdetails">
+			<div class="showdescription">
+				<h2><%= @podcast.title %></h2>
+				<div><%= @podcast.company %></div>
+				<div><%= @podcast.description %></div>
+			</div>
+			<div class="showlinks">
+				<% if current_user %>
+					<%= render "partials/edit_link" %>
+				<% end %>
 
-Company
-<div><%= @podcast.company %></div>
-
-Description
-<div><%= @podcast.description %></div>
-
-<%= link_to 'Edit podcast', edit_podcast_path(@podcast) %><br>
-<%= link_to 'Back to podcast list', podcasts_path %>
+				<%= link_to 'Back to podcast list', podcasts_path %>
+			</div>
+		</div>
+	</div>
+</div>
