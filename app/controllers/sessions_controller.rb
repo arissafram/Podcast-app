@@ -15,7 +15,7 @@ class SessionsController < ApplicationController
     if user
       sign_in(user)
       flash[:notice] = "Hi, #{username}! You signed in!"
-      redirect_to users_path
+      redirect_to podcasts_path
     else
       flash[:error] = "User not found :("
       @user = User.new(username: username)

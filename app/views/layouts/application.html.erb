@@ -30,5 +30,11 @@
 
     <%= yield %>
 
+    <% if current_user %>
+      <br><br>
+      <%= link_to 'Users', users_path %>
+      <%= link_to 'Podcasts', podcasts_path %>
+    <% end %>
+
   </body>
 </html>
