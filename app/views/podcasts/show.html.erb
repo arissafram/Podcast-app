@@ -1,11 +1,14 @@
 <div class="showview">
 	<div class="showcontainer">
-		<img src="http://is1.mzstatic.com/image/thumb/Music111/v4/6c/9e/5f/6c9e5f7e-aed2-b477-516d-af319c09aa49/source/1200x630bb.jpg">
+		<img src=<%="#{@podcast.image}"%> alt="no image"/>
 		<div class="showdetails">
 			<div class="showdescription">
-				<h2><%= @podcast.title %></h2>
-				<div><%= @podcast.company %></div>
-				<div><%= @podcast.description %></div>
+				<div>Title:<%= @podcast.title %></div>
+				<div>Production company:<%= @podcast.company %></div>
+				<div>Description:<%= @podcast.description %></div>
+				<div>Hosts:<%= @podcast.hosts %></div>
+				<div>New episodes released on:<%= @podcast.schedule %></div>
+
 			</div>
 			<div class="showlinks">
 				<% if current_user %>

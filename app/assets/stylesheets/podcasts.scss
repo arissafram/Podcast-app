@@ -55,6 +55,10 @@ img {
   padding: 5px;
 }
 
+.showdescription div {
+  margin: 10px
+}
+
 /*--new form and edit form--*/
 
 .form {
@@ -97,6 +101,7 @@ img {
 }
 
 .form input {
+  width: 200px;
   padding: 2px;
   margin-top: 5px;
   border-radius: 2px;
@@ -117,8 +122,4 @@ img {
 
 .form textarea:hover {
   border: 2px solid lightblue;
-}
-
-.listened {
-  font-size: 14px;
 }

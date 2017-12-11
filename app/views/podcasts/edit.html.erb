@@ -7,10 +7,11 @@
 				<div class="formdescription">
 					<%= form.text_field :title, placeholder: 'Title' %><br>
 					<%= form.text_field :company, placeholder: 'Company' %><br>
+					<%= form.text_field :hosts, placeholder: 'Hosts' %><br>
+					<%= form.text_field :schedule, placeholder: 'New episodes released on' %><br>
 					<%= form.text_area :description, placeholder: 'Description' %><br>
-					<%label_tag :listened %>
-					<%= form.check_box :listened %> Already listened<br>
-				</div>
+					<%= form.text_field :image,
+				placeholder: 'image here' %><br>
 				<div class="formlinks">
 					<%= submit_tag 'Update podcast!' %><br>
 					<%= link_to 'Go back', podcast_path(@podcast) %>

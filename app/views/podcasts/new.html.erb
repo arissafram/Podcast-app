@@ -4,10 +4,13 @@
 		<br>
 			<%= form.text_field :title, placeholder: 'Title' %><br>
 			<%= form.text_field :company, placeholder: 'Media company' %><br>
+		<%= form.text_field :hosts,
+				placeholder: 'Hosts' %><br>
+		<%= form.text_field :schedule,
+				placeholder: 'New episodes released' %><br>
 			<%= form.text_area :description, placeholder: 'Description' %><br>
-			<div class="listened"><%= check_box_tag(:listened) %>
-			<%= label_tag(:listened, "Already listened") %>
-		</div>
+			<%= form.text_field :image,
+				placeholder: 'Image here' %><br>
 			<%= submit_tag 'Add a podcast!' %>
 	<% end %>
 </div>

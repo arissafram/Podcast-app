@@ -1,12 +1,12 @@
 <div class="indexcontainer">
 	<% @podcasts.each do |podcast| %>
 	<div class="eachpodcast">
-		<img src="http://is1.mzstatic.com/image/thumb/Music111/v4/6c/9e/5f/6c9e5f7e-aed2-b477-516d-af319c09aa49/source/1200x630bb.jpg">
-		<div class="podcastdetails">
-			<div class="title"><%= podcast[:title] %></div>
-			<div class="company"><%= podcast[:company] %></div>
-			<div class="description"><%= podcast[:description] %></div>
-			<%= link_to 'More details', podcast_path(podcast) %>
+			<img src=<%="#{podcast[:image]}"%> alt="no image"/>
+			<div class="podcastdetails">
+				<div class="title"><%= podcast[:title] %></div>
+				<div class="company"><%= podcast[:company] %></div>
+				<div class="description"><%= podcast[:description] %></div>
+				<%= link_to 'More details', podcast_path(podcast) %>
 			</div>
 		</div>
 	<% end %>

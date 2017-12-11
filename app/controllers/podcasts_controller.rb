@@ -54,11 +54,11 @@ class PodcastsController < ApplicationController
   private
 
   def create_params
-    params.require(:podcast).permit(:title, :company, :description)
+    params.require(:podcast).permit(:title, :company, :description, :image, :hosts, :schedule)
   end
 
   def update_params
-    params.require(:podcast).permit(:title, :company, :description, :listened)
+    params.require(:podcast).permit(:title, :company, :description, :image, :hosts, :schedule)
   end
 
   def load_podcast
