@@ -9,10 +9,24 @@
   </head>
 
   <body>
-	  <% if current_user %>
-      <%= link_to current_user.username, user_path(current_user) %> signed in
-      <%= button_to 'Log out', session_path, method: :delete %>
+    <% if current_user %>
+      <div class="username">
+        <div class="link">Hi, <%= link_to current_user.username.capitalize, user_path(current_user) %></div>
+        <div class="link"><%= button_to 'Log out', session_path, method: :delete %></div>
+    </div>
     <% end %>
+
+    <% if current_user %>
+      <div class="header">
+        <div class="apptitle">The Podcast Place</div>
+        <div class="linkcontainer">
+          <a class="link" href="/users">Users</a>
+          <a class="link" href="/podcasts">Podcasts</a>
+          <a class="link" href="/podcasts/new">Add a podcast</a>
+        </div>
+      <% end %>
+
+    </div>
 
     <% if flash[:notice].present? %>
       <div class="notice">
@@ -29,12 +43,6 @@
     <% end %>
 
     <%= yield %>
-
-    <% if current_user %>
-      <br><br>
-      <%= link_to 'Users', users_path %>
-      <%= link_to 'Podcasts', podcasts_path %>
-    <% end %>
 
   </body>
 </html>

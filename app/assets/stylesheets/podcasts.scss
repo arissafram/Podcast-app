@@ -1,3 +1,53 @@
 // Place all the styles related to the podcasts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.indexcontainer {
+  display: flex;
+  // flex-direction: column;
+  justify-content: center;
+  flex-flow: row wrap;
+}
+.eachpodcast {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 300px;
+}
+
+img {
+  width: 250px;
+  height: 250px;
+}
+
+.title {
+  font-size: 20px;
+}
+
+.company {
+  font-size: 16px;
+  font-style: italic;
+}
+
+.description {
+  font-size: 14px;
+}
+
+.showcontainer {
+  display: flex;
+}
+
+.showcontainer img {
+  width: 400px;
+  height: 400px;
+  padding: 5px;
+}
+
+.showdetails {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 5px;
+}
