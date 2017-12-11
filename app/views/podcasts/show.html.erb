@@ -1,0 +1,10 @@
+<h2><%= @podcast.title %></h2>
+
+Company
+<div><%= @podcast.company %></div>
+
+Description
+<div><%= @podcast.description %></div>
+
+<%= link_to 'Edit podcast', edit_podcast_path(@podcast) %><br>
+<%= link_to 'Back to podcast list', podcasts_path %>

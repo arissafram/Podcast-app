@@ -1,0 +1,11 @@
+<h3>Add a podcast</h3>
+
+<%= form_for @podcast do |form| %>
+	<%= form.text_field :title, placeholder: 'Title' %><br>
+	<%= form.text_field :company, placeholder: 'Media company' %><br>
+	<%= form.text_area :description, placeholder: 'Description' %><br>
+	<%= check_box_tag(:listened) %>
+	<%= label_tag(:listened, "Already listened") %>
+	<br>
+	<%= submit_tag 'Add a podcast!' %>
+<% end %>

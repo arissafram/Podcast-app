@@ -1,0 +1,15 @@
+<h2>Edit Podcasts</h2>
+
+<%= form_for @podcast do |form| %>
+
+	<%= label_tag :title %><br>
+	<%= form.text_field :title, placeholder: 'Title' %><br>
+
+	<%= label_tag :company %><br>
+	<%= form.text_field :company, placeholder: 'Company' %><br>
+
+	<%= label_tag :description %><br>
+	<%= form.text_area :description, placeholder: 'Description' %><br>
+	<%= submit_tag 'Update podcast!' %>
+	<%= link_to 'Go back', podcast_path(@podcast) %>
+<% end %>

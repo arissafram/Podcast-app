@@ -1,5 +1,5 @@
 class Podcast < ApplicationRecord
   belongs_to :user
 
-  validates_presence_of :name, :description
+  validates_presence_of :title, :description
 end

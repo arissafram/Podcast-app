@@ -1,0 +1,7 @@
+<% @podcasts.each do |podcast| %>
+	<%= podcast[:title] %><br>
+	<%= podcast[:company] %><br>
+	<%= podcast[:description] %><br>
+	<%= link_to 'More details', podcast_path(podcast) %>
+	<br><br>
+<% end %>

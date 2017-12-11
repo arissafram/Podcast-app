@@ -10,6 +10,14 @@ class PodcastsController < ApplicationController
   def create
     @podcast = Podcast.new(create_params)
     @podcast.user = current_user
+
+    if @podcast.save
+      flash["notice"] = 'Podcast has been created!'
+      redirect_to podcasts_path(@podcast)
+    else
+      flash[:error] = @podcast.errors.full_messages.join(', ')
+      render :new
+    end
   end
 
   def edit
@@ -26,7 +34,8 @@ class PodcastsController < ApplicationController
   end
 
   def index
-    @podcasts = current_user.podcasts
+    # @podcasts = current_user.podcasts
+    @podcasts = Podcast.all
   end
 
   def show
@@ -35,15 +44,15 @@ class PodcastsController < ApplicationController
   def destory
     @podcast.destroy
 
-    flash[:notice] = "#{monster.name} has been deleted!"
-    redirect_to monsters_path
+    flash[:notice] = "#{Podcast.title} has been deleted!"
+    redirect_to podcast_path
   end
 
 
   private
 
   def create_params
-    params.require(:podcast).permit(:title, :company, :description, :listened)
+    params.require(:podcast).permit(:title, :company, :description)
   end
 
   def update_params
