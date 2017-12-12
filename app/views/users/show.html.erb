@@ -1,12 +1,12 @@
-<h1><%= @user.username %></h1>
+<div class="userview">
+	<div class="userheader"><%= @user.username.capitalize %>'s Profile</div>
 
-blah blah blah more info on this user
-<br>
-<% @podcasts.each do |podcast| %>
-	<%= podcast[:title] %>
-	<br>
-<% end %>
-
-<br>
-
-<%= link_to 'all users', users_path %>
+	<div class="userpodcasts">
+		<% @podcasts.each do |podcast| %>
+			<div class="eachuserpodcast">
+			<%= podcast[:title] %>
+			</div>
+		<% end %>
+	</div>
+	<%= link_to 'all users', users_path %>
+</div>

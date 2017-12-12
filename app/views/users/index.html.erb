@@ -1,7 +1,10 @@
-<h3>Users</h3>
+<div class="usersview">
+	<h3 class="heading">See your friend's top pods</h3>
 
-<ul>
-  <% @users.each do |user| %>
-    <li><%= link_to user.username, user_path(user) %></li>
-  <% end %>
-</ul>
+	<ul class="userscontainer">
+	  <% @users.each do |user| %>
+	    <li><%= link_to user.username.capitalize, user_path(user), class: "linkclass" %></li>
+	  <% end %>
+	</ul>
+
+</div>
