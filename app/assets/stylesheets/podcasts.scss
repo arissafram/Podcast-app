@@ -6,6 +6,7 @@
 
 .indexcontainer {
   display: flex;
+  // background: #F0F0F8;
   // flex-direction: column;
   justify-content: center;
   flex-flow: row wrap;
@@ -36,6 +37,7 @@ img {
 
 .image {
   border: 2px solid black;
+  display: flex;
 }
 
 .title {
@@ -55,15 +57,17 @@ img {
 /*--show view--*/
 
 .showview {
-  width: 80vw;
+  width: 100%;
+  height: 100vh;
   display: flex;
   justify-content: center;
+  // border: 1px solid black;
 }
 
 .showcontainer {
   display: flex;
-  max-width: 80%
-
+  max-width: 80%;
+  // border: 1px solid black;
 }
 
 .showcontainer img {

@@ -1,9 +1,12 @@
 <div class="usersview">
-	<h3 class="heading">See your friend's top pods</h3>
+	<p class="listenerpage">Listener page</p>
+	<p class="byline">See what everyone else is listening to</p>
 
 	<ul class="userscontainer">
 	  <% @users.each do |user| %>
-	    <li><%= link_to user.username.capitalize, user_path(user), class: "linkclass" %></li>
+	   	<div class="eachuser">
+	    	<p><%= link_to user.username.capitalize, user_path(user), class: "linkclass" %></li>
+		</div>
 	  <% end %>
 	</ul>
 
