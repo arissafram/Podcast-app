@@ -1,22 +1,26 @@
-<h2> Create an account </h2>
+<div class="createaccountview">
+  <div>
+    <p class="createheader">Create an account</p>
+  </div>
 
-<%= form_for @user do |form| %>
-  <%= form.text_field :username,
-        placeholder: 'Username',
-        required: true,
-        minlength: User::USERNAME_LENGTH.begin,
-        maxlength: User::USERNAME_LENGTH.end
-  %>
+<div class="form">
+  <%= form_for @user do |form| %>
+    <p><%= form.text_field :username,
+          placeholder: 'Username',
+          required: true,
+          minlength: User::USERNAME_LENGTH.begin,
+          maxlength: User::USERNAME_LENGTH.end
+    %></p>
 
-  <%= form.password_field :password,
-        placeholder: 'password',
-        required: true,
-        minlength: User::PASSWORD_LENGTH.begin,
-        maxlength: User::PASSWORD_LENGTH.end
-  %>
+    <p><%= form.password_field :password,
+          placeholder: 'password',
+          required: true,
+          minlength: User::PASSWORD_LENGTH.begin,
+          maxlength: User::PASSWORD_LENGTH.end
+    %></p>
 
-  <%= submit_tag 'Create Account!' %>
-<% end %>
-
-<br>
-Returning user? <%= link_to 'Sign in', new_session_path %>
+    <p class="logininsubmit"><%= submit_tag 'Create Account!', :style => "width:100%;height:25px;color:blue"%></p>
+  <% end %>
+    <p><%= link_to 'Sign in', new_session_path, class: 'signinlink'  %></p>
+  </div>
+</div>

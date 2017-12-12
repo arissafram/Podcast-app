@@ -73,7 +73,7 @@ body {
 }
 
 .header {
-  height: 150px;
+  height: 225px;
   width: 100%;
   background-color: darkblue;
   display: flex;
@@ -91,20 +91,29 @@ body {
 }
 
 .username .link {
-  /*display: flex;*/
-  /*align-content: space-between;*/
-  /*flex-direction: row;*/
+ color: white;
+ font-size: 16px;
+}
+
+.greeting {
+  color: white;
+}
+
+.username .link:hover {
+  color: lightblue;
 }
 
 .linkcontainer {
   display: flex;
   justify-content: center;
+  padding-top: 10px;
 }
 
 .header .link {
   padding: 10px;
   cursor: pointer;
   color: white;
+  font-size: 18px;
 }
 
 .header .link:hover {
@@ -120,6 +129,8 @@ body {
   justify-content: center;
   color: white;
   font-size: 60px;
-  font-weight: 800;
+  /*font-weight: 800;*/
+  font-family: 'Alfa Slab One', cursive;
+  letter-spacing: .03em;
 }
 /**/

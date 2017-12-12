@@ -37,3 +37,40 @@
 .linkclass:hover {
   color: lightblue;
 }
+
+/*-- create account view --*/
+
+.createaccountview {
+  display: flex;
+  flex-direction: column;
+  padding-top: 100px;
+  // justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  color: white;
+  background: darkblue;
+  font-size: 60px;
+}
+
+.createheader {
+  font-size: 40px;
+  font-weight: 800;
+  font-family: 'Alfa Slab One', cursive;
+}
+
+.signinlink {
+  font-size: 15px;
+  color: white;
+  margin-top: 5px;
+}
+
+.signinlink:hover {
+  color: lightblue;
+}
+
+// .loginsubmit {
+//   height: 50px;
+//   border: 1px solid white;
+
+// }
