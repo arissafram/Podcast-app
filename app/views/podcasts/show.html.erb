@@ -17,6 +17,8 @@
 					<%= render "partials/edit_link" %>
 				<% end %>
 
+				<a href="/users/<%= @podcast.user_id %>">See other posts from this user</a>
+
 				<%= link_to 'Back to podcast list', podcasts_path %>
 			</div>
 		</div>
