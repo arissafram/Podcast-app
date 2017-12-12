@@ -21,7 +21,6 @@ class PodcastsController < ApplicationController
   end
 
   def edit
-    if @podcast.user != current_user
     @podcast = Podcast.find(params[:id])
   end
 
