@@ -9,18 +9,33 @@
   // flex-direction: column;
   justify-content: center;
   flex-flow: row wrap;
+  margin-bottom: 10px;
 }
 .eachpodcast {
-  margin: 20px;
+  margin-top: 15px;
+  // border: 1px solid black;
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
   width: 300px;
-  height: 300px;
+  height: auto;
+}
+
+.podcastdetails {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  max-width: 250px;
 }
 
 img {
   width: 250px;
   height: 250px;
+}
+
+.image {
+  border: 2px solid black;
 }
 
 .title {
@@ -30,6 +45,7 @@ img {
 .company {
   font-size: 16px;
   font-style: italic;
+  margin-bottom: 5px;
 }
 
 .description {
@@ -38,14 +54,27 @@ img {
 
 /*--show view--*/
 
+.showview {
+  width: 80vw;
+  display: flex;
+  justify-content: center;
+}
+
 .showcontainer {
   display: flex;
+  max-width: 80%
+
 }
 
 .showcontainer img {
   width: 400px;
   height: 400px;
-  padding: 5px;
+  margin: 5px;
+}
+
+.showcontainer .image {
+  max-height: 350px;
+  max-width: 350px;
 }
 
 .showdetails {
@@ -53,10 +82,36 @@ img {
   flex-direction: column;
   justify-content: space-between;
   padding: 5px;
+  text-align: justify;
 }
 
 .showdescription div {
   margin: 10px
+}
+
+.showdetails .title {
+  font-size: 35px;
+  font-weight: 800;
+  // margin-bottom: 20px;
+}
+
+.showdetails .company {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.showdetails .description {
+  margin-bottom: 20px;
+  font-size: 17px;
+  // border: 1px black solid;
+}
+.showdetails .hosts {
+  margin-bottom: 5px;
+  font-size: 13px;
+}
+
+.showdetails .schedule {
+  font-size: 13px;
 }
 
 /*--new form and edit form--*/
@@ -84,6 +139,7 @@ img {
   margin: 10px;
   width: 300px;
   height: 300px;
+  border: 2px solid black;
 }
 
 .rightside {

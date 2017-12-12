@@ -1,17 +1,19 @@
 <div class="showview">
 	<div class="showcontainer">
-		<img src=<%="#{@podcast.image}"%> alt="no image"/>
+		<img class="image" src=<%="#{@podcast.image}"%> alt="no image"/>
 		<div class="showdetails">
 			<div class="showdescription">
-				<div>Title:<%= @podcast.title %></div>
-				<div>Production company:<%= @podcast.company %></div>
-				<div>Description:<%= @podcast.description %></div>
-				<div>Hosts:<%= @podcast.hosts %></div>
-				<div>New episodes released on:<%= @podcast.schedule %></div>
-
+				<p class="title"><%= @podcast.title %></p>
+				<p class="company"><%= @podcast.company %></p>
+				<p class="description"><%= @podcast.description %></p>
+				<p class="hosts">Hosted by <%= @podcast.hosts %></p>
+				<p class="schedule">Episodes released <%= @podcast.schedule %></p>
 			</div>
+
+
+
 			<div class="showlinks">
-				<% if current_user %>
+				<% if current_user.id == @podcast.user_id  %>
 					<%= render "partials/edit_link" %>
 				<% end %>
 

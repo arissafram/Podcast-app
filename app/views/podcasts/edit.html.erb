@@ -2,7 +2,7 @@
 	<div class="formheader">Edit Podcast:</div>
 		<%= form_for @podcast do |form| %>
 		<div class="formdetails">
-			<img src="http://is1.mzstatic.com/image/thumb/Music111/v4/6c/9e/5f/6c9e5f7e-aed2-b477-516d-af319c09aa49/source/1200x630bb.jpg">
+			<img src=<%="#{@podcast.image}"%> alt="no image"/>
 			<div class="rightside">
 				<div class="formdescription">
 					<%= form.text_field :title, placeholder: 'Title' %><br>

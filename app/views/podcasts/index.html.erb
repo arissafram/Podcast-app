@@ -1,7 +1,7 @@
 <div class="indexcontainer">
 	<% @podcasts.each do |podcast| %>
 	<div class="eachpodcast">
-			<img src=<%="#{podcast[:image]}"%> alt="no image"/>
+			<img class="image" src=<%="#{podcast[:image]}"%> alt="no image"/>
 			<div class="podcastdetails">
 				<div class="title"><%= podcast[:title] %></div>
 				<div class="company"><%= podcast[:company] %></div>

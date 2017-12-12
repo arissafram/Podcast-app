@@ -21,6 +21,7 @@ class PodcastsController < ApplicationController
   end
 
   def edit
+    @podcast = Podcast.find(params[:id])
   end
 
   def update
@@ -43,7 +44,7 @@ class PodcastsController < ApplicationController
     @currentuser = current_user.podcasts
   end
 
-  def destory
+  def destroy
     @podcast.destroy
 
     flash[:notice] = "#{Podcast.title} has been deleted!"
