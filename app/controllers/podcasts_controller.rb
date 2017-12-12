@@ -21,6 +21,7 @@ class PodcastsController < ApplicationController
   end
 
   def edit
+    if @podcast.user != current_user
     @podcast = Podcast.find(params[:id])
   end
 
@@ -46,9 +47,8 @@ class PodcastsController < ApplicationController
 
   def destroy
     @podcast.destroy
-
-    flash[:notice] = "#{Podcast.title} has been deleted!"
-    redirect_to podcast_path
+    flash[:notice] = "Podcast has been deleted!"
+    redirect_to podcasts_path
   end
 
 

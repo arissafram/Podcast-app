@@ -1,9 +1,6 @@
-
 <div class="showview">
 	<div class="showcontainer">
-		<div>
 		<img class="image" src=<%="#{@podcast.image}"%> alt="no image"/>
-		</div>
 		<div class="showdetails">
 			<div class="showdescription">
 				<p class="title"><%= @podcast.title %></p>
@@ -18,6 +15,7 @@
 			<div class="showlinks">
 				<% if current_user.id == @podcast.user_id  %>
 					<%= render "partials/edit_link" %>
+					<%= link_to 'Delete podcast', podcast_path(@podcast), method: :delete %>
 				<% end %>
 
 				<a href="/users/<%= @podcast.user_id %>">See other posts from this user</a>

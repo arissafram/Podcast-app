@@ -2,55 +2,6 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.usersview {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100vw;
-  height: 100vh;
-}
-
-.userscontainer {
-  display: flex;
-  flex-direction: column;
-  justify-conter: center;
-  align-items: center;
-  margin-top: 20px;
-}
-
-.userscontainer .eachuser {
-  font-size: 25px;
-}
-
-.usersview .listenerpage {
-  font-size: 30px;
-}
-
-.usersview .heading {
-  font-size: 30px;
-  margin-bottom: 20px;
-}
-
-.userpodcasts {
-  display: flex;
-  flex-direction: column;
-  // align-items: center;
-}
-
-.eachuserpodcast {
-  margin-top: 10px;
-}
-
-.linkclass, .linkclass:visited {
-  // font-size: 50px;
-  color: black;
-  text-decoration: none;
-}
-
-.linkclass:hover {
-  color: lightblue;
-}
-
 /*-- create account view --*/
 
 .createaccountview {
@@ -80,4 +31,86 @@
 
 .signinlink:hover {
   color: lightblue;
+}
+
+/*--- users index view --*/
+
+.usersview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.userscontainer {
+  display: flex;
+  flex-direction: column;
+  justify-conter: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.userscontainer .eachuser {
+  font-size: 25px;
+}
+
+.usersview .listenerpage {
+  font-size: 30px;
+  margin-bottom: 5px;
+}
+
+.usersview .heading {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.userpodcasts {
+  display: flex;
+  flex-direction: column;
+  // align-items: center;
+}
+
+.eachuserpodcast {
+  margin-top: 10px;
+}
+
+.linkclass, .linkclass:visited {
+  // font-size: 50px;
+  color: black;
+  text-decoration: none;
+}
+
+.linkclass:hover {
+  color: lightblue;
+}
+
+
+/*-- user show view --*/
+
+.userheader {
+  margin: 15px 0 15px 0;
+  font-size: 25px;
+}
+
+.userspodcastcontainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.eachpodlink {
+  color: black;
+  font-size: 20px;
+}
+
+.eachpodlink:hover, .backtouserlist:hover {
+  color: blue;
+}
+
+.backtouserlist {
+  margin-top: 30px;
+  text-decoration: none;
+  color: black;
 }
