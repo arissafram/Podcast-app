@@ -1,12 +1,13 @@
 <div class="userview">
-	<div class="userheader"><%= @user.username.capitalize %>'s Profile</div>
+	<div class="userheader"><%= @user.username.capitalize %> has added <%= @totalpods %> podcasts:</div>
 
 	<div class="userpodcasts">
 		<% @podcasts.each do |podcast| %>
 			<div class="eachuserpodcast">
-			<%= podcast[:title] %>
+			<%= link_to "#{podcast[:title]}", podcast %>
 			</div>
 		<% end %>
 	</div>
-	<%= link_to 'all users', users_path %>
+	<br>
+	<%= link_to 'Back to users list', users_path %>
 </div>

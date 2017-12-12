@@ -27,6 +27,7 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @podcasts = User.find(params[:id]).podcasts
+    @totalpods = User.find(params[:id]).podcasts.count
   end
 
   private
